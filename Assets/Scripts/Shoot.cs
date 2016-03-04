@@ -14,9 +14,13 @@ public class Shoot : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Input.GetButtonDown ("Fire1")) 
+		//if (Input.GetButtonDown ("Fire1")) 
+		if (Input.touchCount>0) 
 		{
-			Instantiate (bullet, transform.position, transform.rotation);
+			GameObject cloned; 
+			cloned = Instantiate (bullet, transform.position, transform.rotation) as GameObject;
+			cloned.AddComponent<Projectile_cannon> ();
+
 		}
 	}
 }
