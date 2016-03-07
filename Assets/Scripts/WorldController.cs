@@ -39,6 +39,9 @@ public class WorldController : MonoBehaviour {
 				tile_go.name = "Tile_" + x + "_" + y;
 				tile_go.transform.position = new Vector3( tile_data.X, tile_data.Y, 0);
 				tile_go.transform.SetParent(this.transform, true);
+				tile_go.AddComponent<BoxCollider>();
+				Collider col = tile_go.GetComponent<BoxCollider>();
+				col.transform.position = new Vector3( 0.5f, 0.5f, 0.5f);
 
 				// Add a sprite renderer, but don't bother setting a sprite
 				// because all the tiles are empty right now.

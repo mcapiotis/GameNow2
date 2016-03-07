@@ -24,7 +24,7 @@ public class Destroy_on_touch : MonoBehaviour {
 					Destroy (hit.transform.gameObject);
 					GameObject cloned; 
 					cloned = Instantiate (bullet, hit.transform.position, hit.transform.rotation) as GameObject;
-					cloned.AddComponent<Projectile_cannon> ();
+					//cloned.AddComponent<Projectile_cannon> ();
 				}
 			}
 
